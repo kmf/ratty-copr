@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Ratty
+GenericName=Terminal
+Exec=ratty
+Terminal=false
+Type=Application
+Icon=utilities-terminal
+StartupWMClass=ratty
+Comment=GPU-rendered terminal emulator with inline 3D graphics
+Categories=System;TerminalEmulator;
