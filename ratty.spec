@@ -33,8 +33,9 @@ install -Dm644 %{SOURCE1} %{buildroot}%{_datadir}/applications/ratty.desktop
 %{_datadir}/applications/ratty.desktop
 
 %changelog
-* Mon May 18 2026 github-actions <actions@github.com> - 0.4.0-1
+* Mon May 18 2026 Karl Fischer <karl@obsidian.co.za> - 0.4.0-1
 - Update to 0.4.0
+
 * Wed May 13 2026 Karl Fischer <karl@obsidian.co.za> - 0.3.0-1
 - Update to 0.3.0
 
