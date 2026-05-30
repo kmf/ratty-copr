@@ -33,8 +33,6 @@ install -Dm644 %{SOURCE1} %{buildroot}%{_datadir}/applications/ratty.desktop
 %{_datadir}/applications/ratty.desktop
 
 %changelog
-* Sat May 30 2026 github-actions <actions@github.com> - 0.4.1-1
-- Update to 0.4.1
 * Fri May 30 2026 github-actions <actions@github.com> - 0.4.1-1
 - Update to 0.4.1
 
