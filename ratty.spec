@@ -2,7 +2,7 @@
 %global upstream_arch x86_64-unknown-linux-gnu
 
 Name:           ratty
-Version:        0.4.0
+Version:        0.4.1
 Release:        1%{?dist}
 Summary:        GPU-rendered terminal emulator with inline 3D graphics
 License:        MIT
@@ -33,6 +33,11 @@ install -Dm644 %{SOURCE1} %{buildroot}%{_datadir}/applications/ratty.desktop
 %{_datadir}/applications/ratty.desktop
 
 %changelog
+* Sat May 30 2026 github-actions <actions@github.com> - 0.4.1-1
+- Update to 0.4.1
+* Fri May 30 2026 github-actions <actions@github.com> - 0.4.1-1
+- Update to 0.4.1
+
 * Mon May 18 2026 Karl Fischer <karl@obsidian.co.za> - 0.4.0-1
 - Update to 0.4.0
 
