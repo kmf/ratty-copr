@@ -39,7 +39,7 @@ jobs:
           # Prepend changelog entry
           sed -i "/^%changelog/a * ${DATE} github-actions <actions@github.com> - ${NEW_VERSION}-1\n- Update to ${NEW_VERSION}" ratty.spec
 
-      - name: Open pull request
+      - name: Open and merge pull request
         if: steps.upstream.outputs.version != steps.current.outputs.version
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -50,8 +50,11 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git checkout -b "$BRANCH"
           git add ratty.spec
-          git commit -m "build(spec): update to Ratty ${NEW_VERSION}"
+          git commit -m "build(spec): update to Ratty ${NEW_VERSION}
+
+Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
           git push -u origin "$BRANCH"
           gh pr create \
             --title "build(spec): update to Ratty ${NEW_VERSION}" \
             --body "Upstream released v${NEW_VERSION}. This PR bumps the spec file."
+          gh pr merge "$BRANCH" --auto --squash --delete-branch
